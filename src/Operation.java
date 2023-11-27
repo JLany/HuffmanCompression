@@ -1,0 +1,3 @@
+enum Operation {
+    COMPRESS, DECOMPRESS
+}

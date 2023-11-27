@@ -1,0 +1,24 @@
+Get text from file
+
+Calculate probabilities of symbols
+	Construct nodes and put them in a minimum priority queue 
+
+________________________________________
+Construct huffman codes for each symbol
+	= SymbolNode: (char, probability, boolean code)
+	
+	While pq not empty:
+		Pop 2 nodes from pq
+		Give 0, 1 for their codes
+		Create new node with their prob's sum
+		Assign the 2 nodes as left/right of new node
+		Push new node in pq
+	
+	Traverse tree to acquire each symbol's code(store in a string)
+		current = ""
+		if (node.char != 0)
+			map[node.char] = current + node.code.toString 
+
+________________________________________
+
+Iterate over text and encode

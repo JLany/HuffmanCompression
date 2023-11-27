@@ -1,0 +1,25 @@
+		   ---Huffman Decompression---
+
+
+Read and construct table
+
+	Read number of symbols(1byte) 
+	Read number of bits for each length (1byte)
+	
+	Repeat for nSymbols	
+		Read symbol(1byte)
+		Read code length(nBitsForCodeLength bits)
+		
+		Read code
+		Assign symbol to code in map (Map<String code, Char symbol>)
+
+Read stream and decode
+
+	Read a bit and add to current
+	Check if current matches any entry
+		Flush current and add to output
+	Else 
+		Check if current is MAX_INT
+			Terminate
+
+	
